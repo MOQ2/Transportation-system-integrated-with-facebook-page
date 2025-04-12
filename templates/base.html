@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Transportation System{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        .sidebar {
+            min-height: calc(100vh - 56px);
+            background-color: #f8f9fa;
+            padding: 20px 0;
+        }
+        .sidebar .nav-link {
+            color: #333;
+            border-radius: 0;
+        }
+        .sidebar .nav-link.active {
+            background-color: #0d6efd;
+            color: white;
+        }
+        .sidebar .nav-link:hover {
+            background-color: #e9ecef;
+        }
+        .content {
+            padding: 20px;
+        }
+        .card-dashboard {
+            border-left: 4px solid #0d6efd;
+        }
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .passenger-card {
+            transition: all 0.2s ease;
+        }
+        .passenger-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .car-capacity {
+            font-size: 0.8em;
+            color: #6c757d;
+        }
+        .bg-facebook {
+            background-color: #4267B2;
+            color: white;
+        }
+    </style>
+    {% block head_extras %}{% endblock %}
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                <i class="bi bi-car-front-fill me-2"></i>
+                Transport System
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    {% if current_user.is_authenticated %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-person-circle me-1"></i>
+                            {{ current_user.username }}
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="{{ url_for('dashboard') }}">Dashboard</a></li>
+                            {% if current_user.is_admin %}
+                            <li><a class="dropdown-item" href="{{ url_for('settings') }}">Settings</a></li>
+                            {% endif %}
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{{ url_for('logout') }}">Logout</a></li>
+                        </ul>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            {% if current_user.is_authenticated %}
+            <!-- Sidebar -->
+            <div class="col-md-3 col-lg-2 sidebar">
+                <div class="d-flex flex-column flex-shrink-0 p-3">
+                    <ul class="nav nav-pills flex-column mb-auto">
+                        <li class="nav-item">
+                            <a href="{{ url_for('dashboard') }}" class="nav-link {% if request.endpoint == 'dashboard' %}active{% endif %}">
+                                <i class="bi bi-speedometer2 me-2"></i>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url_for('rides') }}" class="nav-link {% if request.endpoint == 'rides' %}active{% endif %}">
+                                <i class="bi bi-calendar-event me-2"></i>
+                                Rides
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url_for('cars') }}" class="nav-link {% if request.endpoint == 'cars' %}active{% endif %}">
+                                <i class="bi bi-car-front me-2"></i>
+                                Cars
+                            </a>
+                        </li>
+                        {% if current_user.is_admin %}
+                        <li class="nav-item">
+                            <a href="{{ url_for('settings') }}" class="nav-link {% if request.endpoint == 'settings' %}active{% endif %}">
+                                <i class="bi bi-gear me-2"></i>
+                                Settings
+                            </a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+            <!-- Main Content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 content">
+            {% else %}
+            <!-- Main Content (Full Width) -->
+            <main class="col-12 content">
+            {% endif %}
+                <!-- Flash Messages -->
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                        <div class="alert alert-{{ category }} alert-dismissible fade show mt-3" role="alert">
+                            {{ message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                
+                <!-- Page Content -->
+                {% block content %}{% endblock %}
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Common JavaScript functions
+        function confirmAction(message) {
+            return confirm(message);
+        }
+    </script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

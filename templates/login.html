@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Login - Transportation System{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card shadow">
+                <div class="card-body p-4">
+                    <h2 class="text-center mb-4">Login</h2>
+                    <form method="post">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" name="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">Login</button>
+                        </div>
+                    </form>
+                    <div class="mt-3 text-center">
+                        <p class="text-muted">Default admin credentials:<br>
+                        Username: <strong>admin</strong><br>
+                        Password: <strong>admin</strong></p>
+                        <p class="text-muted small">For security reasons, please change the default password after your first login.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

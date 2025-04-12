@@ -1,0 +1,842 @@
+2025-04-12 22:58:27,178 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 22:58:27,179 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 22:58:27,180 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 22:58:27,181 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 22:58:27,181 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 22:58:27,201 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 22:58:27,210 - werkzeug - INFO -  * Debugger PIN: 972-575-040
+2025-04-12 22:58:30,038 - facebook_api - INFO - Post created successfully! Post ID: 653667717822521_122106097256831151
+2025-04-12 22:58:30,051 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 22:58:30] "POST /api/post-assignments HTTP/1.1" 200 -
+2025-04-12 22:58:30,113 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 22:58:30] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 22:58:57,401 - werkzeug - INFO -  * Detected change in 'C:\\Users\\qadim\\OneDrive - student.birzeit.edu\\birzeit\\Projects\\Transportation-system-integrated-with-facebook-page\\facebook_api.py', reloading
+2025-04-12 22:58:58,405 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 22:58:58,406 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 22:58:58,407 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 22:58:58,407 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 22:58:58,408 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 22:58:58,419 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 22:58:58,426 - werkzeug - INFO -  * Debugger PIN: 972-575-040
+2025-04-12 22:59:18,460 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 22:59:18] "GET /rides HTTP/1.1" 200 -
+2025-04-12 22:59:40,980 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 22:59:40] "GET /ride/new HTTP/1.1" 200 -
+2025-04-12 22:59:55,389 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 22:59:55] "[32mPOST /ride/new HTTP/1.1[0m" 302 -
+2025-04-12 22:59:55,405 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 22:59:55] "GET /rides HTTP/1.1" 200 -
+2025-04-12 22:59:58,410 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:00:58 EEST)" (scheduled at 2025-04-12 22:59:58.405273+03:00)
+2025-04-12 22:59:58,411 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 22:59:58,412 - __main__ - INFO - No posts to schedule
+2025-04-12 22:59:58,413 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:00:58 EEST)" executed successfully
+2025-04-12 23:00:24,558 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:00:24] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:00:26,495 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:00:26] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:00:46,014 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:00:46] "GET /ride/2 HTTP/1.1" 200 -
+2025-04-12 23:00:48,729 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:00:48] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:00:58,414 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:01:58 EEST)" (scheduled at 2025-04-12 23:00:58.405273+03:00)
+2025-04-12 23:00:58,414 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:00:58,416 - __main__ - INFO - No posts to schedule
+2025-04-12 23:00:58,417 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:01:58 EEST)" executed successfully
+2025-04-12 23:01:04,652 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:01:04] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:01:05,455 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:01:05] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:01:05,696 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:01:05] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:01:05,944 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:01:05] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:01:26,324 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:01:26,325 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:01:26,326 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 23:01:26,326 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 23:01:26,326 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 23:01:26,348 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 23:01:26,348 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 23:01:26,350 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 23:01:27,168 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:01:27,168 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:01:27,170 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 23:01:27,170 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 23:01:27,170 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 23:01:27,183 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 23:01:27,192 - werkzeug - INFO -  * Debugger PIN: 972-575-040
+2025-04-12 23:01:35,556 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:01:35] "GET / HTTP/1.1" 200 -
+2025-04-12 23:01:38,281 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:01:38] "GET /settings HTTP/1.1" 200 -
+2025-04-12 23:01:46,035 - facebook_api - ERROR - Failed to get page info: {'error': {'message': 'Error validating access token: Session has expired on Saturday, 12-Apr-25 13:00:00 PDT. The current time is Saturday, 12-Apr-25 13:01:46 PDT.', 'type': 'OAuthException', 'code': 190, 'error_subcode': 463, 'fbtrace_id': 'AmGMwPPONG61I8aaATHfbBh'}}
+2025-04-12 23:01:46,038 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:01:46] "POST /settings HTTP/1.1" 200 -
+2025-04-12 23:01:54,494 - facebook_api - ERROR - Failed to get page info: {'error': {'message': 'Error validating access token: Session has expired on Saturday, 12-Apr-25 13:00:00 PDT. The current time is Saturday, 12-Apr-25 13:01:54 PDT.', 'type': 'OAuthException', 'code': 190, 'error_subcode': 463, 'fbtrace_id': 'AvM3ixrmMt8Vywv857gSeqT'}}
+2025-04-12 23:01:54,496 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:01:54] "POST /settings HTTP/1.1" 200 -
+2025-04-12 23:02:26,335 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:03:26 EEST)" (scheduled at 2025-04-12 23:02:26.324473+03:00)
+2025-04-12 23:02:26,336 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:02:26,346 - __main__ - INFO - No posts to schedule
+2025-04-12 23:02:26,349 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:03:26 EEST)" executed successfully
+2025-04-12 23:02:27,184 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:03:27 EEST)" (scheduled at 2025-04-12 23:02:27.168083+03:00)
+2025-04-12 23:02:27,185 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:02:27,190 - __main__ - INFO - No posts to schedule
+2025-04-12 23:02:27,190 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:03:27 EEST)" executed successfully
+2025-04-12 23:02:39,950 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:02:39] "[32mPOST /settings HTTP/1.1[0m" 302 -
+2025-04-12 23:02:40,407 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:02:40] "GET /dashboard HTTP/1.1" 200 -
+2025-04-12 23:02:42,381 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:02:42] "GET /ride/new HTTP/1.1" 200 -
+2025-04-12 23:02:54,217 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:02:54] "[32mPOST /ride/new HTTP/1.1[0m" 302 -
+2025-04-12 23:02:54,246 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:02:54] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:03:26,343 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:04:26 EEST)" (scheduled at 2025-04-12 23:03:26.324473+03:00)
+2025-04-12 23:03:26,343 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:03:26,344 - __main__ - INFO - No posts to schedule
+2025-04-12 23:03:26,345 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:04:26 EEST)" executed successfully
+2025-04-12 23:03:27,180 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:04:27 EEST)" (scheduled at 2025-04-12 23:03:27.168083+03:00)
+2025-04-12 23:03:27,181 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:03:27,182 - __main__ - INFO - No posts to schedule
+2025-04-12 23:03:27,182 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:04:27 EEST)" executed successfully
+2025-04-12 23:03:44,323 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:03:44] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:03:50,710 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:03:50] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:03:57,956 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:03:57] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:04:10,954 - werkzeug - INFO -  * Detected change in 'C:\\Users\\qadim\\OneDrive - student.birzeit.edu\\birzeit\\Projects\\Transportation-system-integrated-with-facebook-page\\app.py', reloading
+2025-04-12 23:04:11,078 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 23:04:12,055 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:04:12,055 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:04:12,056 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 23:04:12,057 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 23:04:12,057 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 23:04:12,074 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 23:04:12,081 - werkzeug - INFO -  * Debugger PIN: 972-575-040
+2025-04-12 23:04:16,401 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:04:16] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:04:17,350 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:04:17] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:04:18,804 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:04:18] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:04:19,223 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:04:19] "GET /cars HTTP/1.1" 200 -
+2025-04-12 23:04:20,321 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:04:20] "GET /dashboard HTTP/1.1" 200 -
+2025-04-12 23:04:21,469 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:04:21] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:04:22,285 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:04:22] "GET /cars HTTP/1.1" 200 -
+2025-04-12 23:04:23,541 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:04:23] "GET /settings HTTP/1.1" 200 -
+2025-04-12 23:04:24,914 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:04:24] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:04:26,327 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:05:26 EEST)" (scheduled at 2025-04-12 23:04:26.324473+03:00)
+2025-04-12 23:04:26,329 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:04:26,332 - __main__ - INFO - No posts to schedule
+2025-04-12 23:04:26,332 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:05:26 EEST)" executed successfully
+2025-04-12 23:04:26,354 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:04:26] "GET /dashboard HTTP/1.1" 200 -
+2025-04-12 23:04:27,106 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:04:27] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:04:28,593 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:04:28] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:04:29,504 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:04:29] "GET /dashboard HTTP/1.1" 200 -
+2025-04-12 23:05:12,063 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:06:12 EEST)" (scheduled at 2025-04-12 23:05:12.055384+03:00)
+2025-04-12 23:05:12,064 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:05:12,065 - __main__ - INFO - No posts to schedule
+2025-04-12 23:05:12,065 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:06:12 EEST)" executed successfully
+2025-04-12 23:05:26,332 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:06:26 EEST)" (scheduled at 2025-04-12 23:05:26.324473+03:00)
+2025-04-12 23:05:26,334 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:05:26,338 - __main__ - INFO - No posts to schedule
+2025-04-12 23:05:26,340 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:06:26 EEST)" executed successfully
+2025-04-12 23:06:12,064 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:07:12 EEST)" (scheduled at 2025-04-12 23:06:12.055384+03:00)
+2025-04-12 23:06:12,064 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:06:12,066 - __main__ - INFO - No posts to schedule
+2025-04-12 23:06:12,067 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:07:12 EEST)" executed successfully
+2025-04-12 23:06:26,339 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:07:26 EEST)" (scheduled at 2025-04-12 23:06:26.324473+03:00)
+2025-04-12 23:06:26,339 - apscheduler.executors.default - INFO - Running job "sync_post_comments_with_context (trigger: interval[0:05:00], next run at: 2025-04-12 23:11:26 EEST)" (scheduled at 2025-04-12 23:06:26.325451+03:00)
+2025-04-12 23:06:26,341 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:06:26,341 - __main__ - INFO - Syncing comments from posts...
+2025-04-12 23:06:26,342 - __main__ - INFO - No posts to schedule
+2025-04-12 23:06:26,343 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:07:26 EEST)" executed successfully
+2025-04-12 23:06:26,347 - apscheduler.executors.default - INFO - Job "sync_post_comments_with_context (trigger: interval[0:05:00], next run at: 2025-04-12 23:11:26 EEST)" executed successfully
+2025-04-12 23:07:12,065 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:08:12 EEST)" (scheduled at 2025-04-12 23:07:12.055384+03:00)
+2025-04-12 23:07:12,065 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:07:12,067 - __main__ - INFO - No posts to schedule
+2025-04-12 23:07:12,068 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:08:12 EEST)" executed successfully
+2025-04-12 23:07:25,070 - werkzeug - INFO -  * Detected change in 'C:\\Users\\qadim\\OneDrive - student.birzeit.edu\\birzeit\\Projects\\Transportation-system-integrated-with-facebook-page\\app.py', reloading
+2025-04-12 23:07:25,238 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 23:07:26,336 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:08:26 EEST)" (scheduled at 2025-04-12 23:07:26.324473+03:00)
+2025-04-12 23:07:26,337 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:07:26,339 - __main__ - INFO - No posts to schedule
+2025-04-12 23:07:26,340 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:08:26 EEST)" executed successfully
+2025-04-12 23:07:26,447 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:07:26,448 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:07:26,449 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 23:07:26,450 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 23:07:26,450 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 23:07:26,470 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 23:07:26,480 - werkzeug - INFO -  * Debugger PIN: 972-575-040
+2025-04-12 23:07:35,881 - werkzeug - INFO -  * Detected change in 'C:\\Users\\qadim\\OneDrive - student.birzeit.edu\\birzeit\\Projects\\Transportation-system-integrated-with-facebook-page\\app.py', reloading
+2025-04-12 23:07:36,003 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 23:07:37,012 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:07:37,012 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:07:37,014 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 23:07:37,014 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 23:07:37,014 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 23:07:37,027 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 23:07:37,035 - werkzeug - INFO -  * Debugger PIN: 972-575-040
+2025-04-12 23:07:49,555 - werkzeug - INFO -  * Detected change in 'C:\\Users\\qadim\\OneDrive - student.birzeit.edu\\birzeit\\Projects\\Transportation-system-integrated-with-facebook-page\\facebook_api.py', reloading
+2025-04-12 23:07:49,673 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 23:07:50,686 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:07:50,686 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:07:50,688 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 23:07:50,688 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 23:07:50,689 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 23:07:50,702 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 23:07:50,710 - werkzeug - INFO -  * Debugger PIN: 972-575-040
+2025-04-12 23:07:52,853 - werkzeug - INFO -  * Detected change in 'C:\\Users\\qadim\\OneDrive - student.birzeit.edu\\birzeit\\Projects\\Transportation-system-integrated-with-facebook-page\\app.py', reloading
+2025-04-12 23:07:52,972 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 23:07:53,932 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:07:53,932 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:07:53,934 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 23:07:53,934 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 23:07:53,934 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 23:07:53,947 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 23:07:53,954 - werkzeug - INFO -  * Debugger PIN: 972-575-040
+2025-04-12 23:08:09,570 - werkzeug - INFO -  * Detected change in 'C:\\Users\\qadim\\OneDrive - student.birzeit.edu\\birzeit\\Projects\\Transportation-system-integrated-with-facebook-page\\facebook_api.py', reloading
+2025-04-12 23:08:09,680 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 23:08:10,559 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:08:10,560 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:08:10,561 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 23:08:10,562 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 23:08:10,562 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 23:08:10,578 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 23:08:10,585 - werkzeug - INFO -  * Debugger PIN: 972-575-040
+2025-04-12 23:08:22,055 - werkzeug - INFO -  * Detected change in 'C:\\Users\\qadim\\OneDrive - student.birzeit.edu\\birzeit\\Projects\\Transportation-system-integrated-with-facebook-page\\.venv\\Lib\\site-packages\\pytz\\__init__.py', reloading
+2025-04-12 23:08:22,211 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 23:08:23,344 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:08:23,345 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:08:23,347 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 23:08:23,347 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 23:08:23,348 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 23:08:23,362 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 23:08:23,371 - werkzeug - INFO -  * Debugger PIN: 972-575-040
+2025-04-12 23:08:26,337 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:09:26 EEST)" (scheduled at 2025-04-12 23:08:26.324473+03:00)
+2025-04-12 23:08:26,337 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:08:26,340 - __main__ - INFO - No posts to schedule
+2025-04-12 23:08:26,341 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:09:26 EEST)" executed successfully
+2025-04-12 23:08:26,564 - werkzeug - INFO -  * Detected change in 'C:\\Users\\qadim\\OneDrive - student.birzeit.edu\\birzeit\\Projects\\Transportation-system-integrated-with-facebook-page\\.venv\\Lib\\site-packages\\flask\\blueprints.py', reloading
+2025-04-12 23:08:26,750 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 23:08:27,830 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:08:27,830 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:08:27,831 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 23:08:27,832 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 23:08:27,832 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 23:08:27,849 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 23:08:27,860 - werkzeug - INFO -  * Debugger PIN: 972-575-040
+2025-04-12 23:09:00,269 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:09:00] "GET /dashboard HTTP/1.1" 200 -
+2025-04-12 23:09:14,722 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:09:14,722 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:09:14,723 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 23:09:14,724 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 23:09:14,724 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 23:09:14,741 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 23:09:14,741 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 23:09:14,743 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 23:09:15,389 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:09:15,389 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:09:15,390 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 23:09:15,390 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 23:09:15,390 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 23:09:15,402 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 23:09:15,409 - werkzeug - INFO -  * Debugger PIN: 972-575-040
+2025-04-12 23:09:18,533 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:09:18] "GET / HTTP/1.1" 200 -
+2025-04-12 23:09:20,748 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:09:20] "GET /dashboard HTTP/1.1" 200 -
+2025-04-12 23:09:24,420 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:09:24] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:09:27,337 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:09:27] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:09:34,370 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:09:34] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:09:37,713 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:09:37] "[32mPOST /ride/1/delete HTTP/1.1[0m" 302 -
+2025-04-12 23:09:37,752 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:09:37] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:09:39,236 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:09:39] "GET /ride/new HTTP/1.1" 200 -
+2025-04-12 23:09:57,760 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:09:57] "[32mPOST /ride/new HTTP/1.1[0m" 302 -
+2025-04-12 23:09:57,773 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:09:57] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:10:14,743 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:11:14 EEST)" (scheduled at 2025-04-12 23:10:14.722996+03:00)
+2025-04-12 23:10:14,746 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:10:14,756 - __main__ - INFO - Found 1 posts to schedule
+2025-04-12 23:10:15,405 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:11:15 EEST)" (scheduled at 2025-04-12 23:10:15.389979+03:00)
+2025-04-12 23:10:15,406 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:10:15,407 - __main__ - INFO - Found 1 posts to schedule
+2025-04-12 23:10:15,468 - __main__ - INFO - Processing post: ID=1, Message=trewrgthjds ba g afdg afg afg afg ...
+2025-04-12 23:10:15,469 - __main__ - INFO - Post 1 will be posted immediately
+2025-04-12 23:10:16,152 - __main__ - INFO - Processing post: ID=1, Message=trewrgthjds ba g afdg afg afg afg ...
+2025-04-12 23:10:16,152 - __main__ - INFO - Post 1 will be posted immediately
+2025-04-12 23:10:18,847 - facebook_api - INFO - Post created successfully! Post ID: 653667717822521_122106104042831151
+2025-04-12 23:10:18,858 - __main__ - INFO - Post 1 processed successfully. Facebook ID: 653667717822521_122106104042831151
+2025-04-12 23:10:18,859 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:11:15 EEST)" executed successfully
+2025-04-12 23:10:20,048 - facebook_api - INFO - Post created successfully! Post ID: 653667717822521_122106104054831151
+2025-04-12 23:10:20,062 - __main__ - INFO - Post 1 processed successfully. Facebook ID: 653667717822521_122106104054831151
+2025-04-12 23:10:20,063 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:11:14 EEST)" executed successfully
+2025-04-12 23:10:33,438 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:10:33] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:10:35,355 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:10:35] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:11:02,646 - __main__ - INFO - Syncing comments from posts...
+2025-04-12 23:11:03,444 - facebook_api - INFO - Retrieved 0 comments
+2025-04-12 23:11:03,447 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:11:03] "POST /api/sync-comments HTTP/1.1" 200 -
+2025-04-12 23:11:03,486 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:11:03] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:11:05,896 - __main__ - INFO - Syncing comments from posts...
+2025-04-12 23:11:06,651 - facebook_api - INFO - Retrieved 0 comments
+2025-04-12 23:11:06,656 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:11:06] "POST /api/sync-comments HTTP/1.1" 200 -
+2025-04-12 23:11:06,684 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:11:06] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:11:14,729 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:12:14 EEST)" (scheduled at 2025-04-12 23:11:14.722996+03:00)
+2025-04-12 23:11:14,730 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:11:14,733 - __main__ - INFO - No posts to schedule
+2025-04-12 23:11:14,734 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:12:14 EEST)" executed successfully
+2025-04-12 23:11:15,398 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:12:15 EEST)" (scheduled at 2025-04-12 23:11:15.389979+03:00)
+2025-04-12 23:11:15,399 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:11:15,400 - __main__ - INFO - No posts to schedule
+2025-04-12 23:11:15,400 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:12:15 EEST)" executed successfully
+2025-04-12 23:11:23,085 - __main__ - INFO - Syncing comments from posts...
+2025-04-12 23:11:24,094 - facebook_api - INFO - Retrieved 0 comments
+2025-04-12 23:11:24,096 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:11:24] "POST /api/sync-comments HTTP/1.1" 200 -
+2025-04-12 23:11:24,121 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:11:24] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:11:26,807 - __main__ - INFO - Syncing comments from posts...
+2025-04-12 23:11:27,723 - facebook_api - INFO - Retrieved 0 comments
+2025-04-12 23:11:27,725 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:11:27] "POST /api/sync-comments HTTP/1.1" 200 -
+2025-04-12 23:11:27,746 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:11:27] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:11:40,518 - __main__ - INFO - Syncing comments from posts...
+2025-04-12 23:11:41,224 - facebook_api - INFO - Retrieved 0 comments
+2025-04-12 23:11:41,226 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:11:41] "POST /api/sync-comments HTTP/1.1" 200 -
+2025-04-12 23:11:41,269 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:11:41] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:11:42,833 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:11:42] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:11:43,919 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:11:43] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:11:44,843 - __main__ - INFO - Syncing comments from posts...
+2025-04-12 23:11:45,655 - facebook_api - INFO - Retrieved 0 comments
+2025-04-12 23:11:45,656 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:11:45] "POST /api/sync-comments HTTP/1.1" 200 -
+2025-04-12 23:11:45,683 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:11:45] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:12:14,727 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:13:14 EEST)" (scheduled at 2025-04-12 23:12:14.722996+03:00)
+2025-04-12 23:12:14,727 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:12:14,728 - __main__ - INFO - No posts to schedule
+2025-04-12 23:12:14,729 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:13:14 EEST)" executed successfully
+2025-04-12 23:12:15,392 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:13:15 EEST)" (scheduled at 2025-04-12 23:12:15.389979+03:00)
+2025-04-12 23:12:15,392 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:12:15,393 - __main__ - INFO - No posts to schedule
+2025-04-12 23:12:15,394 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:13:15 EEST)" executed successfully
+2025-04-12 23:12:34,690 - __main__ - INFO - Syncing comments from posts...
+2025-04-12 23:12:35,438 - facebook_api - INFO - Retrieved 0 comments
+2025-04-12 23:12:35,440 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:12:35] "POST /api/sync-comments HTTP/1.1" 200 -
+2025-04-12 23:12:35,482 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:12:35] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:12:36,391 - __main__ - INFO - Syncing comments from posts...
+2025-04-12 23:12:37,426 - facebook_api - INFO - Retrieved 0 comments
+2025-04-12 23:12:37,428 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:12:37] "POST /api/sync-comments HTTP/1.1" 200 -
+2025-04-12 23:12:37,454 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:12:37] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:12:41,257 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:12:41] "GET /car/new HTTP/1.1" 200 -
+2025-04-12 23:12:44,807 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:12:44] "[32mPOST /car/new HTTP/1.1[0m" 302 -
+2025-04-12 23:12:44,824 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:12:44] "GET /cars HTTP/1.1" 200 -
+2025-04-12 23:12:47,635 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:12:47] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:12:48,926 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:12:48] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:12:50,372 - __main__ - INFO - Syncing comments from posts...
+2025-04-12 23:12:51,346 - facebook_api - INFO - Retrieved 0 comments
+2025-04-12 23:12:51,348 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:12:51] "POST /api/sync-comments HTTP/1.1" 200 -
+2025-04-12 23:12:51,374 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:12:51] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:12:58,794 - werkzeug - INFO -  * Detected change in 'C:\\Users\\qadim\\OneDrive - student.birzeit.edu\\birzeit\\Projects\\Transportation-system-integrated-with-facebook-page\\facebook_api.py', reloading
+2025-04-12 23:12:58,987 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 23:12:59,962 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:12:59,962 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:12:59,964 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 23:12:59,964 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 23:12:59,964 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 23:12:59,977 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 23:12:59,984 - werkzeug - INFO -  * Debugger PIN: 972-575-040
+2025-04-12 23:13:11,416 - werkzeug - INFO -  * Detected change in 'C:\\Users\\qadim\\OneDrive - student.birzeit.edu\\birzeit\\Projects\\Transportation-system-integrated-with-facebook-page\\facebook_api.py', reloading
+2025-04-12 23:13:11,513 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 23:13:12,292 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:13:12,292 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:13:12,294 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 23:13:12,294 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 23:13:12,295 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 23:13:12,308 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 23:13:12,314 - werkzeug - INFO -  * Debugger PIN: 972-575-040
+2025-04-12 23:13:14,729 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:14:14 EEST)" (scheduled at 2025-04-12 23:13:14.722996+03:00)
+2025-04-12 23:13:14,729 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:13:14,732 - __main__ - INFO - No posts to schedule
+2025-04-12 23:13:14,733 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:14:14 EEST)" executed successfully
+2025-04-12 23:13:17,548 - werkzeug - INFO -  * Detected change in 'C:\\Users\\qadim\\OneDrive - student.birzeit.edu\\birzeit\\Projects\\Transportation-system-integrated-with-facebook-page\\facebook_api.py', reloading
+2025-04-12 23:13:17,647 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 23:13:18,458 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:13:18,459 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:13:18,460 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 23:13:18,461 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 23:13:18,461 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 23:13:18,475 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 23:13:18,482 - werkzeug - INFO -  * Debugger PIN: 972-575-040
+2025-04-12 23:13:38,127 - __main__ - INFO - Syncing comments from posts...
+2025-04-12 23:13:38,928 - facebook_api - INFO - Retrieved 0 comments total
+2025-04-12 23:13:38,932 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:13:38] "POST /api/sync-comments HTTP/1.1" 200 -
+2025-04-12 23:13:38,983 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:13:38] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:13:40,352 - __main__ - INFO - Syncing comments from posts...
+2025-04-12 23:13:41,093 - facebook_api - INFO - Retrieved 0 comments total
+2025-04-12 23:13:41,094 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:13:41] "POST /api/sync-comments HTTP/1.1" 200 -
+2025-04-12 23:13:41,114 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:13:41] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:13:45,478 - werkzeug - INFO -  * Detected change in 'C:\\Users\\qadim\\OneDrive - student.birzeit.edu\\birzeit\\Projects\\Transportation-system-integrated-with-facebook-page\\app.py', reloading
+2025-04-12 23:13:45,635 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 23:13:46,467 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:13:46,467 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:13:46,469 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 23:13:46,469 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 23:13:46,470 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 23:13:46,484 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 23:13:46,491 - werkzeug - INFO -  * Debugger PIN: 972-575-040
+2025-04-12 23:13:52,962 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:13:52] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:13:54,677 - __main__ - INFO - Syncing comments from posts...
+2025-04-12 23:13:54,680 - __main__ - INFO - Found 1 posts to check for comments
+2025-04-12 23:13:55,438 - facebook_api - INFO - Retrieved 0 comments total
+2025-04-12 23:13:55,439 - __main__ - INFO - No comments found for post 1
+2025-04-12 23:13:55,439 - __main__ - INFO - Sync complete. Processed 0 comments across 1 posts
+2025-04-12 23:13:55,440 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:13:55] "POST /api/sync-comments HTTP/1.1" 200 -
+2025-04-12 23:13:55,464 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:13:55] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:13:57,060 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:13:57] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:13:58,457 - __main__ - INFO - Syncing comments from posts...
+2025-04-12 23:13:58,459 - __main__ - INFO - Found 1 posts to check for comments
+2025-04-12 23:13:59,176 - facebook_api - INFO - Retrieved 0 comments total
+2025-04-12 23:13:59,177 - __main__ - INFO - No comments found for post 1
+2025-04-12 23:13:59,178 - __main__ - INFO - Sync complete. Processed 0 comments across 1 posts
+2025-04-12 23:13:59,178 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:13:59] "POST /api/sync-comments HTTP/1.1" 200 -
+2025-04-12 23:13:59,201 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:13:59] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:13:59,840 - __main__ - INFO - Syncing comments from posts...
+2025-04-12 23:13:59,841 - __main__ - INFO - Found 1 posts to check for comments
+2025-04-12 23:14:00,614 - facebook_api - INFO - Retrieved 0 comments total
+2025-04-12 23:14:00,616 - __main__ - INFO - No comments found for post 1
+2025-04-12 23:14:00,616 - __main__ - INFO - Sync complete. Processed 0 comments across 1 posts
+2025-04-12 23:14:00,617 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:14:00] "POST /api/sync-comments HTTP/1.1" 200 -
+2025-04-12 23:14:00,639 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:14:00] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:14:14,738 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:15:14 EEST)" (scheduled at 2025-04-12 23:14:14.722996+03:00)
+2025-04-12 23:14:14,738 - apscheduler.executors.default - INFO - Running job "sync_post_comments_with_context (trigger: interval[0:05:00], next run at: 2025-04-12 23:19:14 EEST)" (scheduled at 2025-04-12 23:14:14.722996+03:00)
+2025-04-12 23:14:14,738 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:14:14,739 - __main__ - INFO - Syncing comments from posts...
+2025-04-12 23:14:14,740 - __main__ - INFO - No posts to schedule
+2025-04-12 23:14:14,741 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:15:14 EEST)" executed successfully
+2025-04-12 23:14:15,639 - facebook_api - INFO - Retrieved 0 comments
+2025-04-12 23:14:15,640 - apscheduler.executors.default - INFO - Job "sync_post_comments_with_context (trigger: interval[0:05:00], next run at: 2025-04-12 23:19:14 EEST)" executed successfully
+2025-04-12 23:14:29,597 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:14:29] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:14:31,444 - __main__ - INFO - Syncing comments from posts...
+2025-04-12 23:14:31,445 - __main__ - INFO - Found 1 posts to check for comments
+2025-04-12 23:14:32,138 - facebook_api - INFO - Retrieved 0 comments total
+2025-04-12 23:14:32,140 - __main__ - INFO - No comments found for post 1
+2025-04-12 23:14:32,140 - __main__ - INFO - Sync complete. Processed 0 comments across 1 posts
+2025-04-12 23:14:32,141 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:14:32] "POST /api/sync-comments HTTP/1.1" 200 -
+2025-04-12 23:14:32,168 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:14:32] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:14:40,327 - werkzeug - INFO -  * Detected change in 'C:\\Users\\qadim\\OneDrive - student.birzeit.edu\\birzeit\\Projects\\Transportation-system-integrated-with-facebook-page\\app.py', reloading
+2025-04-12 23:14:40,556 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 23:14:41,760 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:14:41,760 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:14:41,762 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 23:14:41,763 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 23:14:41,763 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 23:14:41,780 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 23:14:41,790 - werkzeug - INFO -  * Debugger PIN: 972-575-040
+2025-04-12 23:14:46,005 - werkzeug - INFO -  * Detected change in 'C:\\Users\\qadim\\OneDrive - student.birzeit.edu\\birzeit\\Projects\\Transportation-system-integrated-with-facebook-page\\app.py', reloading
+2025-04-12 23:14:46,104 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 23:14:46,879 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:14:46,879 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:14:46,881 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 23:14:46,881 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 23:14:46,881 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 23:14:46,903 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 23:14:46,913 - werkzeug - INFO -  * Debugger PIN: 972-575-040
+2025-04-12 23:14:50,086 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:14:50] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:14:51,562 - __main__ - INFO - Syncing comments from posts...
+2025-04-12 23:14:51,564 - __main__ - INFO - Found 1 posts to check for comments
+2025-04-12 23:14:52,399 - facebook_api - INFO - Retrieved 0 comments total
+2025-04-12 23:14:52,400 - __main__ - INFO - No comments found for post 1
+2025-04-12 23:14:52,400 - __main__ - INFO - Sync complete. Processed 0 comments across 1 posts
+2025-04-12 23:14:52,401 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:14:52] "POST /api/sync-comments HTTP/1.1" 200 -
+2025-04-12 23:14:52,421 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:14:52] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:14:53,172 - __main__ - INFO - Syncing comments from posts...
+2025-04-12 23:14:53,173 - __main__ - INFO - Found 1 posts to check for comments
+2025-04-12 23:14:53,892 - facebook_api - INFO - Retrieved 0 comments total
+2025-04-12 23:14:53,895 - __main__ - INFO - No comments found for post 1
+2025-04-12 23:14:53,895 - __main__ - INFO - Sync complete. Processed 0 comments across 1 posts
+2025-04-12 23:14:53,897 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:14:53] "POST /api/sync-comments HTTP/1.1" 200 -
+2025-04-12 23:14:53,918 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:14:53] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:15:14,733 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:16:14 EEST)" (scheduled at 2025-04-12 23:15:14.722996+03:00)
+2025-04-12 23:15:14,734 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:15:14,735 - __main__ - INFO - No posts to schedule
+2025-04-12 23:15:14,735 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:16:14 EEST)" executed successfully
+2025-04-12 23:15:24,948 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:15:24] "GET / HTTP/1.1" 200 -
+2025-04-12 23:15:27,247 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:15:27] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:15:29,265 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:15:29] "GET /cars HTTP/1.1" 200 -
+2025-04-12 23:15:30,494 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:15:30] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:15:32,431 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:15:32] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:15:33,962 - __main__ - INFO - Syncing comments from posts...
+2025-04-12 23:15:33,963 - __main__ - INFO - Found 1 posts to check for comments
+2025-04-12 23:15:34,665 - facebook_api - INFO - Retrieved 0 comments total
+2025-04-12 23:15:34,667 - __main__ - INFO - No comments found for post 1
+2025-04-12 23:15:34,667 - __main__ - INFO - Sync complete. Processed 0 comments across 1 posts
+2025-04-12 23:15:34,667 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:15:34] "POST /api/sync-comments HTTP/1.1" 200 -
+2025-04-12 23:15:34,690 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:15:34] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:15:57,879 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:15:57,879 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:15:57,879 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 23:15:57,881 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 23:15:57,881 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 23:15:57,903 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 23:15:57,903 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 23:15:57,905 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 23:15:58,563 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:15:58,563 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:15:58,565 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 23:15:58,565 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 23:15:58,565 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 23:15:58,578 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 23:15:58,584 - werkzeug - INFO -  * Debugger PIN: 972-575-040
+2025-04-12 23:16:02,114 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:16:02] "GET / HTTP/1.1" 200 -
+2025-04-12 23:16:04,172 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:16:04] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:16:08,394 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:16:08] "[32mPOST /ride/1/delete HTTP/1.1[0m" 302 -
+2025-04-12 23:16:08,407 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:16:08] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:16:10,129 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:16:10] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:16:22,280 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:16:22,280 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:16:22,281 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 23:16:22,281 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 23:16:22,281 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 23:16:22,302 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 23:16:22,302 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 23:16:22,304 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 23:16:23,012 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:16:23,013 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:16:23,014 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 23:16:23,014 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 23:16:23,014 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 23:16:23,024 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 23:16:23,031 - werkzeug - INFO -  * Debugger PIN: 972-575-040
+2025-04-12 23:16:27,625 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:16:27] "GET / HTTP/1.1" 200 -
+2025-04-12 23:16:29,494 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:16:29] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:16:33,217 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:16:33] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:16:33,927 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:16:33] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:16:34,138 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:16:34] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:16:34,309 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:16:34] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:16:34,533 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:16:34] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:16:34,716 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:16:34] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:16:34,878 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:16:34] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:16:35,055 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:16:35] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:16:35,254 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:16:35] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:16:35,456 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:16:35] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:16:35,686 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:16:35] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:16:35,891 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:16:35] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:16:36,072 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:16:36] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:17:18,531 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:17:18] "GET /ride/new HTTP/1.1" 200 -
+2025-04-12 23:17:22,292 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:18:22 EEST)" (scheduled at 2025-04-12 23:17:22.280384+03:00)
+2025-04-12 23:17:22,293 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:17:22,300 - __main__ - INFO - No posts to schedule
+2025-04-12 23:17:22,301 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:18:22 EEST)" executed successfully
+2025-04-12 23:17:23,026 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:18:23 EEST)" (scheduled at 2025-04-12 23:17:23.012747+03:00)
+2025-04-12 23:17:23,026 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:17:23,030 - __main__ - INFO - No posts to schedule
+2025-04-12 23:17:23,031 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:18:23 EEST)" executed successfully
+2025-04-12 23:17:29,887 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:17:29] "[32mPOST /ride/new HTTP/1.1[0m" 302 -
+2025-04-12 23:17:29,903 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:17:29] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:18:09,940 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:18:09] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:18:11,511 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:18:11] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:18:12,604 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:18:12] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:18:22,284 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:19:22 EEST)" (scheduled at 2025-04-12 23:18:22.280384+03:00)
+2025-04-12 23:18:22,285 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:18:22,286 - __main__ - INFO - Found 1 posts to schedule
+2025-04-12 23:18:22,287 - __main__ - ERROR - No Facebook credentials found
+2025-04-12 23:18:22,288 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:19:22 EEST)" executed successfully
+2025-04-12 23:18:23,016 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:19:23 EEST)" (scheduled at 2025-04-12 23:18:23.012747+03:00)
+2025-04-12 23:18:23,016 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:18:23,017 - __main__ - INFO - Found 1 posts to schedule
+2025-04-12 23:18:23,019 - __main__ - ERROR - No Facebook credentials found
+2025-04-12 23:18:23,019 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:19:23 EEST)" executed successfully
+2025-04-12 23:18:34,312 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:18:34] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:18:35,618 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:18:35] "GET /settings HTTP/1.1" 200 -
+2025-04-12 23:18:44,450 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:18:44] "[32mPOST /settings HTTP/1.1[0m" 302 -
+2025-04-12 23:18:45,230 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:18:45] "GET /dashboard HTTP/1.1" 200 -
+2025-04-12 23:18:49,517 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:18:49] "GET /dashboard HTTP/1.1" 200 -
+2025-04-12 23:19:22,293 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:20:22 EEST)" (scheduled at 2025-04-12 23:19:22.280384+03:00)
+2025-04-12 23:19:22,294 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:19:22,295 - __main__ - INFO - Found 1 posts to schedule
+2025-04-12 23:19:23,005 - __main__ - INFO - Processing post: ID=1, Message=fdsdfgnmhgffdghng dfdag asd adsf ...
+2025-04-12 23:19:23,005 - __main__ - INFO - Post 1 will be posted immediately
+2025-04-12 23:19:23,027 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:20:23 EEST)" (scheduled at 2025-04-12 23:19:23.012747+03:00)
+2025-04-12 23:19:23,027 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:19:23,029 - __main__ - INFO - Found 1 posts to schedule
+2025-04-12 23:19:23,699 - __main__ - INFO - Processing post: ID=1, Message=fdsdfgnmhgffdghng dfdag asd adsf ...
+2025-04-12 23:19:23,699 - __main__ - INFO - Post 1 will be posted immediately
+2025-04-12 23:19:24,843 - facebook_api - INFO - Post created successfully! Post ID: 653667717822521_122106110480831151
+2025-04-12 23:19:24,859 - __main__ - INFO - Post 1 processed successfully. Facebook ID: 653667717822521_122106110480831151
+2025-04-12 23:19:24,859 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:20:22 EEST)" executed successfully
+2025-04-12 23:19:26,628 - facebook_api - INFO - Post created successfully! Post ID: 653667717822521_122106110486831151
+2025-04-12 23:19:26,638 - __main__ - INFO - Post 1 processed successfully. Facebook ID: 653667717822521_122106110486831151
+2025-04-12 23:19:26,639 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:20:23 EEST)" executed successfully
+2025-04-12 23:19:35,895 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:19:35] "GET /dashboard HTTP/1.1" 200 -
+2025-04-12 23:20:22,285 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:21:22 EEST)" (scheduled at 2025-04-12 23:20:22.280384+03:00)
+2025-04-12 23:20:22,287 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:20:22,288 - __main__ - INFO - No posts to schedule
+2025-04-12 23:20:22,289 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:21:22 EEST)" executed successfully
+2025-04-12 23:20:23,016 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:21:23 EEST)" (scheduled at 2025-04-12 23:20:23.012747+03:00)
+2025-04-12 23:20:23,017 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:20:23,018 - __main__ - INFO - No posts to schedule
+2025-04-12 23:20:23,019 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:21:23 EEST)" executed successfully
+2025-04-12 23:20:44,490 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:20:44] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:20:45,587 - __main__ - INFO - Syncing comments from posts...
+2025-04-12 23:20:45,588 - __main__ - INFO - Found 1 posts to check for comments
+2025-04-12 23:20:46,539 - facebook_api - INFO - Retrieved 2 comments total
+2025-04-12 23:20:46,542 - __main__ - INFO - Processing 2 comments for post 1
+2025-04-12 23:20:46,542 - __main__ - INFO - Processing 2 comments for post 1
+2025-04-12 23:20:46,554 - __main__ - INFO - Added new passenger from comment 122106110486831151_1711982019675031: Test1 -> .
+2025-04-12 23:20:46,563 - __main__ - INFO - Added new passenger from comment 122106110486831151_1250900963087416: Test1 -> ..
+2025-04-12 23:20:46,564 - __main__ - INFO - Sync complete. Processed 2 comments across 1 posts
+2025-04-12 23:20:46,564 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:20:46] "POST /api/sync-comments HTTP/1.1" 200 -
+2025-04-12 23:20:46,602 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:20:46] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:20:58,527 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:20:58] "GET /car/new HTTP/1.1" 200 -
+2025-04-12 23:21:02,014 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:21:02] "[32mPOST /car/new HTTP/1.1[0m" 302 -
+2025-04-12 23:21:02,031 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:21:02] "GET /cars HTTP/1.1" 200 -
+2025-04-12 23:21:04,279 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:21:04] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:21:06,220 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:21:06] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:21:08,095 - __main__ - INFO - Syncing comments from posts...
+2025-04-12 23:21:08,097 - __main__ - INFO - Found 1 posts to check for comments
+2025-04-12 23:21:09,232 - facebook_api - INFO - Retrieved 2 comments total
+2025-04-12 23:21:09,235 - __main__ - INFO - Processing 2 comments for post 1
+2025-04-12 23:21:09,236 - __main__ - INFO - Processing 2 comments for post 1
+2025-04-12 23:21:09,238 - __main__ - INFO - Sync complete. Processed 2 comments across 1 posts
+2025-04-12 23:21:09,239 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:21:09] "POST /api/sync-comments HTTP/1.1" 200 -
+2025-04-12 23:21:09,274 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:21:09] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:21:12,784 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:21:12] "POST /api/assign-passenger HTTP/1.1" 200 -
+2025-04-12 23:21:12,811 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:21:12] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:21:16,803 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:21:16] "POST /api/assign-passenger HTTP/1.1" 200 -
+2025-04-12 23:21:18,053 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:21:18] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:21:22,293 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:22:22 EEST)" (scheduled at 2025-04-12 23:21:22.280384+03:00)
+2025-04-12 23:21:22,293 - apscheduler.executors.default - INFO - Running job "sync_post_comments_with_context (trigger: interval[0:05:00], next run at: 2025-04-12 23:26:22 EEST)" (scheduled at 2025-04-12 23:21:22.280786+03:00)
+2025-04-12 23:21:22,294 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:21:22,294 - __main__ - INFO - Syncing comments from posts...
+2025-04-12 23:21:22,296 - __main__ - INFO - No posts to schedule
+2025-04-12 23:21:22,296 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:22:22 EEST)" executed successfully
+2025-04-12 23:21:22,301 - __main__ - INFO - Found 1 posts to check for comments
+2025-04-12 23:21:23,022 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:22:23 EEST)" (scheduled at 2025-04-12 23:21:23.012747+03:00)
+2025-04-12 23:21:23,023 - apscheduler.executors.default - INFO - Running job "sync_post_comments_with_context (trigger: interval[0:05:00], next run at: 2025-04-12 23:26:23 EEST)" (scheduled at 2025-04-12 23:21:23.013749+03:00)
+2025-04-12 23:21:23,023 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:21:23,023 - __main__ - INFO - Syncing comments from posts...
+2025-04-12 23:21:23,026 - __main__ - INFO - No posts to schedule
+2025-04-12 23:21:23,026 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:22:23 EEST)" executed successfully
+2025-04-12 23:21:23,027 - __main__ - INFO - Found 1 posts to check for comments
+2025-04-12 23:21:23,116 - facebook_api - INFO - Retrieved 2 comments total
+2025-04-12 23:21:23,118 - __main__ - INFO - Processing 2 comments for post 1
+2025-04-12 23:21:23,118 - __main__ - INFO - Processing 2 comments for post 1
+2025-04-12 23:21:23,121 - __main__ - INFO - Sync complete. Processed 2 comments across 1 posts
+2025-04-12 23:21:23,122 - apscheduler.executors.default - INFO - Job "sync_post_comments_with_context (trigger: interval[0:05:00], next run at: 2025-04-12 23:26:22 EEST)" executed successfully
+2025-04-12 23:21:23,859 - facebook_api - INFO - Retrieved 2 comments total
+2025-04-12 23:21:23,860 - __main__ - INFO - Processing 2 comments for post 1
+2025-04-12 23:21:23,861 - __main__ - INFO - Processing 2 comments for post 1
+2025-04-12 23:21:23,862 - __main__ - INFO - Sync complete. Processed 2 comments across 1 posts
+2025-04-12 23:21:23,862 - apscheduler.executors.default - INFO - Job "sync_post_comments_with_context (trigger: interval[0:05:00], next run at: 2025-04-12 23:26:23 EEST)" executed successfully
+2025-04-12 23:21:24,861 - facebook_api - INFO - Post created successfully! Post ID: 653667717822521_122106112112831151
+2025-04-12 23:21:24,870 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:21:24] "POST /api/post-assignments HTTP/1.1" 200 -
+2025-04-12 23:21:24,909 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:21:24] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:21:47,153 - werkzeug - INFO -  * Detected change in 'C:\\Users\\qadim\\OneDrive - student.birzeit.edu\\birzeit\\Projects\\Transportation-system-integrated-with-facebook-page\\app.py', reloading
+2025-04-12 23:21:47,347 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 23:21:48,138 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:21:48,138 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:21:48,140 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 23:21:48,141 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 23:21:48,141 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 23:21:48,152 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 23:21:48,159 - werkzeug - INFO -  * Debugger PIN: 972-575-040
+2025-04-12 23:22:17,570 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:22:17] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:22:18,353 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:22:18] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:22:22,289 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:23:22 EEST)" (scheduled at 2025-04-12 23:22:22.280384+03:00)
+2025-04-12 23:22:22,290 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:22:22,292 - __main__ - INFO - No posts to schedule
+2025-04-12 23:22:22,292 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:23:22 EEST)" executed successfully
+2025-04-12 23:22:35,026 - werkzeug - INFO -  * Detected change in 'C:\\Users\\qadim\\OneDrive - student.birzeit.edu\\birzeit\\Projects\\Transportation-system-integrated-with-facebook-page\\app.py', reloading
+2025-04-12 23:22:35,147 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 23:23:50,603 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:23:50,603 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:23:50,604 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 23:23:50,604 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 23:23:50,605 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 23:23:50,622 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 23:23:50,622 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 23:23:50,624 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 23:23:51,292 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:23:51,292 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:23:51,293 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 23:23:51,293 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 23:23:51,293 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 23:23:51,304 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 23:23:51,311 - werkzeug - INFO -  * Debugger PIN: 972-575-040
+2025-04-12 23:23:53,362 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:23:53] "GET / HTTP/1.1" 200 -
+2025-04-12 23:23:56,425 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:23:56] "GET /dashboard HTTP/1.1" 200 -
+2025-04-12 23:23:58,929 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:23:58] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:24:01,373 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:24:01] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:24:02,606 - __main__ - INFO - Syncing comments from posts...
+2025-04-12 23:24:02,609 - __main__ - INFO - Found 1 posts to check for comments
+2025-04-12 23:24:03,387 - facebook_api - INFO - Retrieved 2 comments total
+2025-04-12 23:24:03,390 - __main__ - INFO - Processing 2 comments for post 1
+2025-04-12 23:24:03,390 - __main__ - INFO - Processing 2 comments for post 1
+2025-04-12 23:24:03,397 - __main__ - INFO - Sync complete. Processed 2 comments across 1 posts
+2025-04-12 23:24:03,397 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:24:03] "POST /api/sync-comments HTTP/1.1" 200 -
+2025-04-12 23:24:03,431 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:24:03] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:24:10,154 - facebook_api - ERROR - Failed to delete post: {'error': {'message': "Unsupported delete request. Object with ID '653667717822521_122106112112831151' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api", 'type': 'GraphMethodException', 'code': 100, 'error_subcode': 33, 'fbtrace_id': 'AQoCa5pZ-zu5tL0YGANAWjo'}}
+2025-04-12 23:24:12,476 - facebook_api - INFO - Post created successfully! Post ID: 653667717822521_122106113132831151
+2025-04-12 23:24:12,491 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:24:12] "POST /api/post-assignments HTTP/1.1" 200 -
+2025-04-12 23:24:12,526 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:24:12] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:24:19,004 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:24:19] "POST /api/assign-passenger HTTP/1.1" 200 -
+2025-04-12 23:24:19,032 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:24:19] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:24:25,211 - facebook_api - INFO - Post 653667717822521_122106113132831151 deleted successfully
+2025-04-12 23:24:29,405 - facebook_api - INFO - Post created successfully! Post ID: 653667717822521_122106113276831151
+2025-04-12 23:24:29,412 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:24:29] "POST /api/post-assignments HTTP/1.1" 200 -
+2025-04-12 23:24:29,439 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:24:29] "GET /ride/1 HTTP/1.1" 200 -
+2025-04-12 23:24:50,611 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:25:50 EEST)" (scheduled at 2025-04-12 23:24:50.603810+03:00)
+2025-04-12 23:24:50,615 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:24:50,623 - __main__ - INFO - No posts to schedule
+2025-04-12 23:24:50,623 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:25:50 EEST)" executed successfully
+2025-04-12 23:24:51,294 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:25:51 EEST)" (scheduled at 2025-04-12 23:24:51.291432+03:00)
+2025-04-12 23:24:51,296 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:24:51,299 - __main__ - INFO - No posts to schedule
+2025-04-12 23:24:51,299 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:25:51 EEST)" executed successfully
+2025-04-12 23:25:08,399 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:25:08] "GET /dashboard HTTP/1.1" 200 -
+2025-04-12 23:25:10,965 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:25:10] "GET /ride/new HTTP/1.1" 200 -
+2025-04-12 23:25:26,166 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:25:26] "[32mPOST /ride/new HTTP/1.1[0m" 302 -
+2025-04-12 23:25:26,195 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:25:26] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:25:50,607 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:26:50 EEST)" (scheduled at 2025-04-12 23:25:50.603810+03:00)
+2025-04-12 23:25:50,607 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:25:50,609 - __main__ - INFO - Found 1 posts to schedule
+2025-04-12 23:25:51,299 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:26:51 EEST)" (scheduled at 2025-04-12 23:25:51.291432+03:00)
+2025-04-12 23:25:51,299 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:25:51,301 - __main__ - INFO - Found 1 posts to schedule
+2025-04-12 23:25:51,428 - __main__ - INFO - Processing post: ID=2, Message=fdsdfdgbhgnmngfdad adfa ...
+2025-04-12 23:25:51,429 - __main__ - INFO - Post 2 will be posted immediately
+2025-04-12 23:25:52,190 - __main__ - INFO - Processing post: ID=2, Message=fdsdfdgbhgnmngfdad adfa ...
+2025-04-12 23:25:52,191 - __main__ - INFO - Post 2 will be posted immediately
+2025-04-12 23:25:53,871 - facebook_api - INFO - Post created successfully! Post ID: 653667717822521_122106114230831151
+2025-04-12 23:25:53,880 - __main__ - INFO - Post 2 processed successfully. Facebook ID: 653667717822521_122106114230831151
+2025-04-12 23:25:53,880 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:26:51 EEST)" executed successfully
+2025-04-12 23:25:54,330 - facebook_api - INFO - Post created successfully! Post ID: 653667717822521_122106114236831151
+2025-04-12 23:25:54,341 - __main__ - INFO - Post 2 processed successfully. Facebook ID: 653667717822521_122106114236831151
+2025-04-12 23:25:54,342 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:26:50 EEST)" executed successfully
+2025-04-12 23:26:50,605 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:27:50 EEST)" (scheduled at 2025-04-12 23:26:50.603810+03:00)
+2025-04-12 23:26:50,607 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:26:50,612 - __main__ - INFO - No posts to schedule
+2025-04-12 23:26:50,613 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:27:50 EEST)" executed successfully
+2025-04-12 23:26:51,298 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:27:51 EEST)" (scheduled at 2025-04-12 23:26:51.291432+03:00)
+2025-04-12 23:26:51,299 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:26:51,300 - __main__ - INFO - No posts to schedule
+2025-04-12 23:26:51,301 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:27:51 EEST)" executed successfully
+2025-04-12 23:27:33,800 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:27:33] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:27:50,605 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:28:50 EEST)" (scheduled at 2025-04-12 23:27:50.603810+03:00)
+2025-04-12 23:27:50,607 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:27:50,610 - __main__ - INFO - No posts to schedule
+2025-04-12 23:27:50,611 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:28:50 EEST)" executed successfully
+2025-04-12 23:27:51,308 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:28:51 EEST)" (scheduled at 2025-04-12 23:27:51.291432+03:00)
+2025-04-12 23:27:51,310 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:27:51,314 - __main__ - INFO - No posts to schedule
+2025-04-12 23:27:51,315 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:28:51 EEST)" executed successfully
+2025-04-12 23:28:50,617 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:29:50 EEST)" (scheduled at 2025-04-12 23:28:50.603810+03:00)
+2025-04-12 23:28:50,618 - apscheduler.executors.default - INFO - Running job "sync_post_comments_with_context (trigger: interval[0:05:00], next run at: 2025-04-12 23:33:50 EEST)" (scheduled at 2025-04-12 23:28:50.603810+03:00)
+2025-04-12 23:28:50,619 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:28:50,621 - __main__ - INFO - Syncing comments from posts...
+2025-04-12 23:28:50,624 - __main__ - INFO - No posts to schedule
+2025-04-12 23:28:50,628 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:29:50 EEST)" executed successfully
+2025-04-12 23:28:50,632 - __main__ - INFO - Found 2 posts to check for comments
+2025-04-12 23:28:51,303 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:29:51 EEST)" (scheduled at 2025-04-12 23:28:51.291432+03:00)
+2025-04-12 23:28:51,303 - apscheduler.executors.default - INFO - Running job "sync_post_comments_with_context (trigger: interval[0:05:00], next run at: 2025-04-12 23:33:51 EEST)" (scheduled at 2025-04-12 23:28:51.292385+03:00)
+2025-04-12 23:28:51,303 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:28:51,303 - __main__ - INFO - Syncing comments from posts...
+2025-04-12 23:28:51,305 - __main__ - INFO - No posts to schedule
+2025-04-12 23:28:51,306 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:29:51 EEST)" executed successfully
+2025-04-12 23:28:51,307 - __main__ - INFO - Found 2 posts to check for comments
+2025-04-12 23:28:51,639 - facebook_api - INFO - Retrieved 2 comments total
+2025-04-12 23:28:51,640 - __main__ - INFO - Processing 2 comments for post 1
+2025-04-12 23:28:51,641 - __main__ - INFO - Processing 2 comments for post 1
+2025-04-12 23:28:52,109 - facebook_api - INFO - Retrieved 2 comments total
+2025-04-12 23:28:52,111 - __main__ - INFO - Processing 2 comments for post 1
+2025-04-12 23:28:52,111 - __main__ - INFO - Processing 2 comments for post 1
+2025-04-12 23:28:52,330 - facebook_api - INFO - Retrieved 0 comments total
+2025-04-12 23:28:52,335 - __main__ - INFO - No comments found for post 2
+2025-04-12 23:28:52,336 - __main__ - INFO - Sync complete. Processed 2 comments across 2 posts
+2025-04-12 23:28:52,338 - apscheduler.executors.default - INFO - Job "sync_post_comments_with_context (trigger: interval[0:05:00], next run at: 2025-04-12 23:33:50 EEST)" executed successfully
+2025-04-12 23:28:52,896 - facebook_api - INFO - Retrieved 0 comments total
+2025-04-12 23:28:52,897 - __main__ - INFO - No comments found for post 2
+2025-04-12 23:28:52,899 - __main__ - INFO - Sync complete. Processed 2 comments across 2 posts
+2025-04-12 23:28:52,899 - apscheduler.executors.default - INFO - Job "sync_post_comments_with_context (trigger: interval[0:05:00], next run at: 2025-04-12 23:33:51 EEST)" executed successfully
+2025-04-12 23:29:50,617 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:30:50 EEST)" (scheduled at 2025-04-12 23:29:50.603810+03:00)
+2025-04-12 23:29:50,617 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:29:50,618 - __main__ - INFO - No posts to schedule
+2025-04-12 23:29:50,619 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:30:50 EEST)" executed successfully
+2025-04-12 23:29:51,298 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:30:51 EEST)" (scheduled at 2025-04-12 23:29:51.291432+03:00)
+2025-04-12 23:29:51,298 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:29:51,300 - __main__ - INFO - No posts to schedule
+2025-04-12 23:29:51,300 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:30:51 EEST)" executed successfully
+2025-04-12 23:30:50,606 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:31:50 EEST)" (scheduled at 2025-04-12 23:30:50.603810+03:00)
+2025-04-12 23:30:50,606 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:30:50,608 - __main__ - INFO - No posts to schedule
+2025-04-12 23:30:50,608 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:31:50 EEST)" executed successfully
+2025-04-12 23:30:51,294 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:31:51 EEST)" (scheduled at 2025-04-12 23:30:51.291432+03:00)
+2025-04-12 23:30:51,296 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:30:51,298 - __main__ - INFO - No posts to schedule
+2025-04-12 23:30:51,300 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:31:51 EEST)" executed successfully
+2025-04-12 23:31:50,616 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:32:50 EEST)" (scheduled at 2025-04-12 23:31:50.603810+03:00)
+2025-04-12 23:31:50,618 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:31:50,624 - __main__ - INFO - No posts to schedule
+2025-04-12 23:31:50,625 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:32:50 EEST)" executed successfully
+2025-04-12 23:31:51,296 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:32:51 EEST)" (scheduled at 2025-04-12 23:31:51.291432+03:00)
+2025-04-12 23:31:51,299 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:31:51,303 - __main__ - INFO - No posts to schedule
+2025-04-12 23:31:51,303 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:32:51 EEST)" executed successfully
+2025-04-12 23:32:44,897 - werkzeug - INFO -  * Detected change in 'C:\\Users\\qadim\\OneDrive - student.birzeit.edu\\birzeit\\Projects\\Transportation-system-integrated-with-facebook-page\\app.py', reloading
+2025-04-12 23:32:44,898 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-04-12 23:32:45,057 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 23:32:45,896 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:32:45,896 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:32:45,898 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 23:32:45,898 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 23:32:45,898 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 23:32:45,899 - __main__ - INFO - Scheduler initialized and started
+2025-04-12 23:32:45,913 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 23:32:45,922 - werkzeug - INFO -  * Debugger PIN: 972-575-040
+2025-04-12 23:32:50,612 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:33:50 EEST)" (scheduled at 2025-04-12 23:32:50.603810+03:00)
+2025-04-12 23:32:50,613 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:32:50,616 - __main__ - INFO - No posts to schedule
+2025-04-12 23:32:50,618 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:33:50 EEST)" executed successfully
+2025-04-12 23:33:02,591 - werkzeug - INFO -  * Detected change in 'C:\\Users\\qadim\\OneDrive - student.birzeit.edu\\birzeit\\Projects\\Transportation-system-integrated-with-facebook-page\\facebook_api.py', reloading
+2025-04-12 23:33:02,591 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-04-12 23:33:02,592 - __main__ - INFO - Scheduler shut down
+2025-04-12 23:33:02,727 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 23:33:03,736 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:33:03,737 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:33:03,739 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 23:33:03,741 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 23:33:03,741 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 23:33:03,742 - __main__ - INFO - Scheduler initialized and started
+2025-04-12 23:33:03,765 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 23:33:03,778 - werkzeug - INFO -  * Debugger PIN: 972-575-040
+2025-04-12 23:33:18,332 - werkzeug - INFO -  * Detected change in 'C:\\Users\\qadim\\OneDrive - student.birzeit.edu\\birzeit\\Projects\\Transportation-system-integrated-with-facebook-page\\facebook_api.py', reloading
+2025-04-12 23:33:18,334 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-04-12 23:33:18,334 - __main__ - INFO - Scheduler shut down
+2025-04-12 23:33:18,448 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 23:33:19,286 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:33:19,286 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:33:19,288 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 23:33:19,288 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 23:33:19,288 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 23:33:19,289 - __main__ - INFO - Scheduler initialized and started
+2025-04-12 23:33:19,301 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 23:33:19,307 - werkzeug - INFO -  * Debugger PIN: 972-575-040
+2025-04-12 23:33:33,879 - werkzeug - INFO -  * Detected change in 'C:\\Users\\qadim\\OneDrive - student.birzeit.edu\\birzeit\\Projects\\Transportation-system-integrated-with-facebook-page\\facebook_api.py', reloading
+2025-04-12 23:33:33,880 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-04-12 23:33:33,880 - __main__ - INFO - Scheduler shut down
+2025-04-12 23:33:33,996 - werkzeug - INFO -  * Restarting with stat
+2025-04-12 23:33:34,754 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:33:34,755 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-04-12 23:33:34,756 - apscheduler.scheduler - INFO - Added job "check_scheduled_posts_with_context" to job store "default"
+2025-04-12 23:33:34,756 - apscheduler.scheduler - INFO - Added job "sync_post_comments_with_context" to job store "default"
+2025-04-12 23:33:34,756 - apscheduler.scheduler - INFO - Scheduler started
+2025-04-12 23:33:34,757 - __main__ - INFO - Scheduler initialized and started
+2025-04-12 23:33:34,768 - werkzeug - WARNING -  * Debugger is active!
+2025-04-12 23:33:34,774 - werkzeug - INFO -  * Debugger PIN: 972-575-040
+2025-04-12 23:33:44,000 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:33:44] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:33:45,100 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:33:45] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:33:46,706 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:33:46] "GET /ride/new HTTP/1.1" 200 -
+2025-04-12 23:33:50,613 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:34:50 EEST)" (scheduled at 2025-04-12 23:33:50.603810+03:00)
+2025-04-12 23:33:50,613 - apscheduler.executors.default - INFO - Running job "sync_post_comments_with_context (trigger: interval[0:05:00], next run at: 2025-04-12 23:38:50 EEST)" (scheduled at 2025-04-12 23:33:50.603810+03:00)
+2025-04-12 23:33:50,614 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:33:50,614 - __main__ - INFO - Syncing comments from posts...
+2025-04-12 23:33:50,617 - __main__ - INFO - No posts to schedule
+2025-04-12 23:33:50,618 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:34:50 EEST)" executed successfully
+2025-04-12 23:33:50,619 - __main__ - INFO - Found 2 posts to check for comments
+2025-04-12 23:33:51,961 - facebook_api - INFO - Retrieved 2 comments total
+2025-04-12 23:33:51,962 - __main__ - INFO - Processing 2 comments for post 1
+2025-04-12 23:33:51,962 - __main__ - INFO - Processing 2 comments for post 1
+2025-04-12 23:33:52,645 - facebook_api - INFO - Retrieved 0 comments total
+2025-04-12 23:33:52,650 - __main__ - INFO - No comments found for post 2
+2025-04-12 23:33:52,650 - __main__ - INFO - Sync complete. Processed 2 comments across 2 posts
+2025-04-12 23:33:52,651 - apscheduler.executors.default - INFO - Job "sync_post_comments_with_context (trigger: interval[0:05:00], next run at: 2025-04-12 23:38:50 EEST)" executed successfully
+2025-04-12 23:33:55,506 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:33:55] "[32mPOST /ride/new HTTP/1.1[0m" 302 -
+2025-04-12 23:33:55,524 - werkzeug - INFO - 127.0.0.1 - - [12/Apr/2025 23:33:55] "GET /rides HTTP/1.1" 200 -
+2025-04-12 23:34:34,765 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:35:34 EEST)" (scheduled at 2025-04-12 23:34:34.754266+03:00)
+2025-04-12 23:34:34,766 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:34:34,768 - __main__ - INFO - Found 1 posts to schedule
+2025-04-12 23:34:35,464 - __main__ - INFO - Processing post: ID=3, Message=fgs...
+2025-04-12 23:34:35,465 - __main__ - INFO - Post 3 will be posted immediately
+2025-04-12 23:34:37,419 - facebook_api - INFO - Post created successfully! Post ID: 653667717822521_122106120620831151
+2025-04-12 23:34:37,428 - __main__ - INFO - Post 3 processed successfully. Facebook ID: 653667717822521_122106120620831151
+2025-04-12 23:34:37,428 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:35:34 EEST)" executed successfully
+2025-04-12 23:34:50,604 - apscheduler.executors.default - INFO - Running job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:35:50 EEST)" (scheduled at 2025-04-12 23:34:50.603810+03:00)
+2025-04-12 23:34:50,605 - __main__ - INFO - Checking scheduled posts...
+2025-04-12 23:34:50,606 - __main__ - INFO - No posts to schedule
+2025-04-12 23:34:50,606 - apscheduler.executors.default - INFO - Job "check_scheduled_posts_with_context (trigger: interval[0:01:00], next run at: 2025-04-12 23:35:50 EEST)" executed successfully
+2025-04-12 23:35:33,424 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-04-12 23:35:33,425 - __main__ - INFO - Scheduler shut down
+2025-04-12 23:35:33,520 - apscheduler.scheduler - INFO - Scheduler has been shut down

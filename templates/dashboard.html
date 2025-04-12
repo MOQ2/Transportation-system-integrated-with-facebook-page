@@ -1,0 +1,232 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard - Transportation System{% endblock %}
+
+{% block content %}
+<div class="py-3">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="h2">Dashboard</h1>
+        <button id="syncCommentsBtn" class="btn btn-outline-primary">
+            <i class="bi bi-arrow-repeat me-2"></i> Sync Comments
+        </button>
+    </div>
+
+    <!-- Facebook Page Info Card -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    {% if page_info %}
+                    <div class="d-flex align-items-center">
+                        {% if page_info.picture %}
+                        <img src="{{ page_info.picture.data.url }}" alt="{{ page_info.name }}" class="me-3" style="width: 60px; height: 60px; border-radius: 5px;">
+                        {% else %}
+                        <div class="me-3 bg-facebook d-flex align-items-center justify-content-center" style="width: 60px; height: 60px; border-radius: 5px;">
+                            <i class="bi bi-facebook" style="font-size: 30px;"></i>
+                        </div>
+                        {% endif %}
+                        <div>
+                            <h5 class="mb-0">{{ page_info.name }}</h5>
+                            <p class="text-muted mb-1">{{ page_info.category }}</p>
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-people-fill text-primary me-2"></i> 
+                                <span>{{ page_info.fan_count }} followers</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% else %}
+                    <div class="text-center py-3">
+                        <i class="bi bi-facebook text-primary mb-3" style="font-size: 3rem;"></i>
+                        <h5>Facebook Page Not Connected</h5>
+                        <p class="mb-0">Connect your Facebook page to start managing your transportation system.</p>
+                        <a href="{{ url_for('settings') }}" class="btn btn-primary mt-3">Connect Facebook Page</a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="row mb-4">
+        <div class="col-md-3 mb-3">
+            <div class="card card-dashboard shadow-sm h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="text-muted">Scheduled Rides</h6>
+                            <h3>{{ stats.scheduled_rides }}</h3>
+                        </div>
+                        <div class="bg-light rounded-circle p-3">
+                            <i class="bi bi-calendar-plus text-primary" style="font-size: 1.5rem;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card card-dashboard shadow-sm h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="text-muted">Active Rides</h6>
+                            <h3>{{ stats.active_rides }}</h3>
+                        </div>
+                        <div class="bg-light rounded-circle p-3">
+                            <i class="bi bi-car-front-fill text-success" style="font-size: 1.5rem;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card card-dashboard shadow-sm h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="text-muted">Total Passengers</h6>
+                            <h3>{{ stats.total_passengers }}</h3>
+                        </div>
+                        <div class="bg-light rounded-circle p-3">
+                            <i class="bi bi-people-fill text-info" style="font-size: 1.5rem;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card card-dashboard shadow-sm h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="text-muted">Available Cars</h6>
+                            <h3>{{ stats.available_cars }}</h3>
+                        </div>
+                        <div class="bg-light rounded-circle p-3">
+                            <i class="bi bi-car-front text-warning" style="font-size: 1.5rem;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upcoming Rides -->
+    <div class="row">
+        <div class="col-lg-8 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Upcoming Rides</h5>
+                    <a href="{{ url_for('rides') }}" class="btn btn-sm btn-outline-primary">View All</a>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Date & Time</th>
+                                    <th>Message</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% if upcoming_rides %}
+                                    {% for ride in upcoming_rides %}
+                                    <tr>
+                                        <td>{{ ride.scheduled_time.strftime('%b %d, %Y %H:%M') }}</td>
+                                        <td>{{ ride.message|truncate(40) }}</td>
+                                        <td>
+                                            {% if ride.is_posted %}
+                                            <span class="badge bg-success">Posted</span>
+                                            {% else %}
+                                            <span class="badge bg-warning text-dark">Scheduled</span>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            <a href="{{ url_for('ride_detail', ride_id=ride.id) }}" class="btn btn-sm btn-outline-primary">
+                                                <i class="bi bi-eye"></i> View
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                {% else %}
+                                    <tr>
+                                        <td colspan="4" class="text-center py-3">
+                                            <p class="mb-0">No upcoming rides scheduled</p>
+                                            <a href="{{ url_for('new_ride') }}" class="btn btn-sm btn-primary mt-2">
+                                                <i class="bi bi-plus"></i> Schedule a Ride
+                                            </a>
+                                        </td>
+                                    </tr>
+                                {% endif %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">Quick Actions</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-grid gap-2">
+                        <a href="{{ url_for('new_ride') }}" class="btn btn-primary">
+                            <i class="bi bi-plus-lg me-2"></i> Schedule New Ride
+                        </a>
+                        <a href="{{ url_for('cars') }}" class="btn btn-outline-primary">
+                            <i class="bi bi-car-front me-2"></i> Manage Cars
+                        </a>
+                        {% if current_user.is_admin %}
+                        <a href="{{ url_for('settings') }}" class="btn btn-outline-secondary">
+                            <i class="bi bi-gear me-2"></i> Settings
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const syncBtn = document.getElementById('syncCommentsBtn');
+    
+    if (syncBtn) {
+        syncBtn.addEventListener('click', function() {
+            syncBtn.disabled = true;
+            syncBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Syncing...';
+            
+            fetch('/api/sync-comments', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Comments synced successfully!');
+                    location.reload();
+                } else {
+                    alert('Error syncing comments: ' + data.error);
+                }
+            })
+            .catch(error => {
+                alert('Error syncing comments: ' + error);
+            })
+            .finally(() => {
+                syncBtn.disabled = false;
+                syncBtn.innerHTML = '<i class="bi bi-arrow-repeat me-2"></i> Sync Comments';
+            });
+        });
+    }
+});
+</script>
+{% endblock %}

@@ -1,0 +1,546 @@
+{% extends 'base.html' %}
+
+{% block title %}Ride Details - Transportation System{% endblock %}
+
+{% block content %}
+<div class="py-3">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="h2">Ride Details</h1>
+        <a href="{{ url_for('rides') }}" class="btn btn-outline-secondary">
+            <i class="bi bi-arrow-left me-2"></i> Back to Rides
+        </a>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8 order-2 order-lg-1">
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-white">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                        <h5 class="mb-0">Passengers</h5>
+                        <div class="d-flex gap-2">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown">
+                                    <i class="bi bi-funnel me-1"></i> Filter
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item filter-btn" href="#" data-filter="all">All Passengers</a></li>
+                                    <li><a class="dropdown-item filter-btn" href="#" data-filter="assigned">Assigned</a></li>
+                                    <li><a class="dropdown-item filter-btn" href="#" data-filter="unassigned">Unassigned</a></li>
+                                </ul>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#addPassengerModal">
+                                <i class="bi bi-plus-lg me-1"></i> Add Passenger
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3" id="passengers-container">
+                        {% for passenger in passengers %}
+                        <div class="col-12 col-md-6 passenger-item" data-status="{{ passenger.car_id and 'assigned' or 'unassigned' }}">
+                            <div class="card passenger-card h-100 {{ passenger.car_id and 'border-success' or '' }}">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        {% if passenger.profile_pic_url %}
+                                        <img src="{{ passenger.profile_pic_url }}" class="rounded-circle me-3" 
+                                             alt="{{ passenger.name }}" style="width: 40px; height: 40px; object-fit: cover;">
+                                        {% else %}
+                                        <div class="bg-light rounded-circle me-3 d-flex align-items-center justify-content-center" 
+                                             style="width: 40px; height: 40px;">
+                                            <i class="bi bi-person"></i>
+                                        </div>
+                                        {% endif %}
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-0">{{ passenger.name }}</h6>
+                                            <small class="text-muted">{{ passenger.gender or 'Unknown' }}</small>
+                                        </div>
+                                        <div class="dropdown">
+                                            <button class="btn btn-link text-muted p-0" type="button" data-bs-toggle="dropdown">
+                                                <i class="bi bi-three-dots-vertical"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item edit-passenger" href="#" 
+                                                       data-passenger-id="{{ passenger.id }}"
+                                                       data-name="{{ passenger.name }}"
+                                                       data-destination="{{ passenger.destination }}">
+                                                    <i class="bi bi-pencil me-2"></i> Edit
+                                                </a></li>
+                                                <li><a class="dropdown-item text-danger delete-passenger" href="#" 
+                                                       data-passenger-id="{{ passenger.id }}">
+                                                    <i class="bi bi-trash me-2"></i> Remove
+                                                </a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi bi-geo-alt text-muted me-2"></i>
+                                            <strong>Destination:</strong>
+                                        </div>
+                                        <p class="mb-0 ms-4">{{ passenger.destination }}</p>
+                                    </div>
+                                    {% if passenger.comment_text %}
+                                    <div class="mb-3">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="bi bi-chat-text text-muted me-2"></i>
+                                            <strong>Comment:</strong>
+                                        </div>
+                                        <p class="mb-0 ms-4 small">{{ passenger.comment_text }}</p>
+                                    </div>
+                                    {% endif %}
+                                    <div class="mt-3">
+                                        <form class="assign-form" data-passenger-id="{{ passenger.id }}">
+                                            <div class="input-group">
+                                                <select class="form-select car-select" name="car_id" 
+                                                        aria-label="Car selection">
+                                                    <option value="" {{ not passenger.car_id and 'selected' or '' }}>
+                                                        Select car...
+                                                    </option>
+                                                    {% for car in cars %}
+                                                    {% set car_passenger_count = passengers|selectattr('car_id', 'equalto', car.id)|list|length %}
+                                                    <option value="{{ car.id }}" 
+                                                        {{ passenger.car_id == car.id and 'selected' or '' }}
+                                                        {{ car_passenger_count >= car.capacity and passenger.car_id != car.id and 'disabled' or '' }}>
+                                                        {{ car.name }} 
+                                                        ({{ car_passenger_count }}/{{ car.capacity }})
+                                                        {{ car_passenger_count >= car.capacity and '- Full' or '' }}
+                                                    </option>
+                                                    {% endfor %}
+                                                </select>
+                                                <button type="submit" class="btn btn-primary assign-btn">
+                                                    <i class="bi bi-check-lg"></i>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% else %}
+                        <div class="col-12 text-center py-5">
+                            <div class="text-muted">
+                                <i class="bi bi-people display-4"></i>
+                                <h5 class="mt-3">No passengers yet</h5>
+                                <p class="mb-3">Add passengers manually or sync comments from Facebook</p>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addPassengerModal">
+                                        <i class="bi bi-plus-lg me-2"></i> Add Passenger
+                                    </button>
+                                    <button id="syncCommentsBtnEmpty" class="btn btn-outline-primary">
+                                        <i class="bi bi-arrow-repeat me-2"></i> Sync Comments
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 order-1 order-lg-2 mb-4 mb-lg-0">
+            <div class="position-sticky" style="top: 1rem;">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h5 class="mb-3">Quick Stats</h5>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div>Total Passengers</div>
+                            <span class="badge bg-primary rounded-pill">{{ passengers|length }}</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div>Assigned to Cars</div>
+                            <span class="badge bg-success rounded-pill">{{ passengers|selectattr('car_id')|list|length }}</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>Unassigned</div>
+                            <span class="badge bg-danger rounded-pill">{{ passengers|rejectattr('car_id')|list|length }}</span>
+                        </div>
+                        <hr>
+                        <div class="d-grid">
+                            <button id="syncCommentsBtn" class="btn btn-outline-primary">
+                                <i class="bi bi-arrow-repeat me-2"></i> Sync Comments
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-white">
+                        <h5 class="mb-0">Assignment Post</h5>
+                    </div>
+                    <div class="card-body">
+                        {% if ride.assignment_post %}
+                        <div class="mb-3">
+                            <div class="alert alert-info">
+                                <i class="bi bi-info-circle me-2"></i>
+                                Last posted: {{ ride.assignment_post.created_at.strftime('%B %d, %Y at %H:%M') }}
+                            </div>
+                        </div>
+                        {% endif %}
+                        <div class="d-grid gap-2">
+                            <button id="postAssignmentsBtn" class="btn btn-primary">
+                                <i class="bi bi-facebook me-2"></i>
+                                {% if ride.assignment_post %}Update{% else %}Post{% endif %} Assignments
+                            </button>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="useImageFormat">
+                                <label class="form-check-label" for="useImageFormat">
+                                    Post as image (Coming soon)
+                                </label>
+                            </div>
+                            {% if ride.assignment_post %}
+                            <a href="https://facebook.com/{{ ride.assignment_post.facebook_post_id }}" 
+                               target="_blank" class="btn btn-outline-primary">
+                                <i class="bi bi-box-arrow-up-right me-2"></i>
+                                View on Facebook
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm">
+                    <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Cars</h5>
+                        <a href="{{ url_for('new_car') }}" class="btn btn-sm btn-outline-primary">
+                            <i class="bi bi-plus-lg me-1"></i> Add Car
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        {% if cars %}
+                            {% for car in cars %}
+                            {% set car_passenger_count = passengers|selectattr('car_id', 'equalto', car.id)|list|length %}
+                            <div class="card mb-3 {{ car_passenger_count >= car.capacity and 'border-danger' or '' }}">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h6 class="card-title mb-0">{{ car.name }}</h6>
+                                        <span class="badge {{ car_passenger_count >= car.capacity and 'bg-danger' or 'bg-secondary' }}">
+                                            {{ car_passenger_count }}/{{ car.capacity }}
+                                        </span>
+                                    </div>
+                                    <div class="mt-2">
+                                        <div class="progress" style="height: 6px;">
+                                            <div class="progress-bar {{ car_passenger_count >= car.capacity and 'bg-danger' or '' }}" 
+                                                 role="progressbar" 
+                                                 style="width: {{ (car_passenger_count / car.capacity) * 100 }}%" 
+                                                 aria-valuenow="{{ car_passenger_count }}" 
+                                                 aria-valuemin="0" 
+                                                 aria-valuemax="{{ car.capacity }}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% if car.description %}
+                                    <p class="card-text mt-2 small text-muted">{{ car.description }}</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            {% endfor %}
+                        {% else %}
+                            <div class="text-center py-3">
+                                <p class="mb-3">No cars available</p>
+                                <a href="{{ url_for('new_car') }}" class="btn btn-primary btn-sm">
+                                    <i class="bi bi-plus-lg me-1"></i> Add a Car
+                                </a>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add/Edit Passenger Modal -->
+    <div class="modal fade" id="addPassengerModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="passengerModalTitle">Add New Passenger</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="passengerForm">
+                        <input type="hidden" id="passengerId" name="passenger_id">
+                        <div class="mb-3">
+                            <label for="passengerName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="passengerName" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="passengerDestination" class="form-label">Destination</label>
+                            <input type="text" class="form-control" id="passengerDestination" name="destination" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="passengerGender" class="form-label">Gender</label>
+                            <select class="form-select" id="passengerGender" name="gender">
+                                <option value="">Unknown</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="selectedCar" class="form-label">Assign to Car</label>
+                            <select class="form-select" id="selectedCar" name="car_id">
+                                <option value="">Select car...</option>
+                                {% for car in cars %}
+                                {% set car_passenger_count = passengers|selectattr('car_id', 'equalto', car.id)|list|length %}
+                                <option value="{{ car.id }}"
+                                    {{ car_passenger_count >= car.capacity and 'disabled' or '' }}>
+                                    {{ car.name }} 
+                                    ({{ car_passenger_count }}/{{ car.capacity }})
+                                    {{ car_passenger_count >= car.capacity and '- Full' or '' }}
+                                </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="savePassenger">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div class="modal fade" id="deleteConfirmModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirm Deletion</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to remove this passenger?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="confirmDelete">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const passengerModal = new bootstrap.Modal(document.getElementById('addPassengerModal'));
+    const deleteModal = new bootstrap.Modal(document.getElementById('deleteConfirmModal'));
+    let currentPassengerId = null;
+
+    // Handle passenger form submission
+    document.getElementById('savePassenger').addEventListener('click', function() {
+        const form = document.getElementById('passengerForm');
+        const formData = new FormData(form);
+        const passengerId = document.getElementById('passengerId').value;
+        
+        const endpoint = passengerId ? '/api/edit-passenger' : '/api/add-passenger';
+        
+        if (passengerId) {
+            formData.append('passenger_id', passengerId);
+        }
+        
+        formData.append('post_id', '{{ ride.id }}');
+        
+        fetch(endpoint, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                location.reload();
+            } else {
+                alert('Error: ' + (data.error || 'Unknown error'));
+            }
+        })
+        .catch(error => {
+            alert('Error: ' + error);
+        });
+    });
+
+    // Handle edit passenger click
+    document.querySelectorAll('.edit-passenger').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const passenger = this.dataset;
+            
+            document.getElementById('passengerModalTitle').textContent = 'Edit Passenger';
+            document.getElementById('passengerId').value = passenger.passengerId;
+            document.getElementById('passengerName').value = passenger.name;
+            document.getElementById('passengerDestination').value = passenger.destination;
+            
+            passengerModal.show();
+        });
+    });
+
+    // Handle delete passenger click
+    document.querySelectorAll('.delete-passenger').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            currentPassengerId = this.dataset.passengerId;
+            deleteModal.show();
+        });
+    });
+
+    // Handle delete confirmation
+    document.getElementById('confirmDelete').addEventListener('click', function() {
+        if (!currentPassengerId) return;
+        
+        fetch('/api/delete-passenger', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: `passenger_id=${currentPassengerId}`
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                location.reload();
+            } else {
+                alert('Error: ' + (data.error || 'Unknown error'));
+            }
+        })
+        .catch(error => {
+            alert('Error: ' + error);
+        });
+    });
+
+    // Reset modal form when opening for new passenger
+    document.querySelector('[data-bs-target="#addPassengerModal"]').addEventListener('click', function() {
+        document.getElementById('passengerModalTitle').textContent = 'Add New Passenger';
+        document.getElementById('passengerForm').reset();
+        document.getElementById('passengerId').value = '';
+    });
+
+    // Handle car assignment
+    document.querySelectorAll('.assign-form').forEach(form => {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const passengerId = this.getAttribute('data-passenger-id');
+            const carId = this.querySelector('.car-select').value;
+            const assignBtn = this.querySelector('.assign-btn');
+            
+            assignBtn.disabled = true;
+            assignBtn.innerHTML = '<span class="spinner-border spinner-border-sm"></span>';
+            
+            fetch('/api/assign-passenger', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `passenger_id=${passengerId}&car_id=${carId}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    location.reload();
+                } else {
+                    alert('Error: ' + (data.error || 'Unknown error'));
+                }
+            })
+            .catch(error => {
+                alert('Error: ' + error);
+            })
+            .finally(() => {
+                assignBtn.disabled = false;
+                assignBtn.innerHTML = '<i class="bi bi-check-lg"></i>';
+            });
+        });
+    });
+
+    // Filter passengers
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const filter = this.getAttribute('data-filter');
+            const passengers = document.querySelectorAll('.passenger-item');
+            
+            passengers.forEach(passenger => {
+                if (filter === 'all' || passenger.getAttribute('data-status') === filter) {
+                    passenger.style.display = 'block';
+                } else {
+                    passenger.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    // Handle sync comments
+    [document.getElementById('syncCommentsBtn'), document.getElementById('syncCommentsBtnEmpty')]
+        .filter(Boolean)
+        .forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.disabled = true;
+                this.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Syncing...';
+                
+                fetch('/api/sync-comments', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        location.reload();
+                    } else {
+                        alert('Error: ' + (data.error || 'Unknown error'));
+                    }
+                })
+                .catch(error => {
+                    alert('Error: ' + error);
+                })
+                .finally(() => {
+                    this.disabled = false;
+                    this.innerHTML = '<i class="bi bi-arrow-repeat me-2"></i> Sync Comments';
+                });
+            });
+        });
+
+    // Handle posting assignments
+    const postAssignmentsBtn = document.getElementById('postAssignmentsBtn');
+    if (postAssignmentsBtn) {
+        postAssignmentsBtn.addEventListener('click', function() {
+            if (!confirm('Are you sure you want to post the car assignments to Facebook?')) {
+                return;
+            }
+
+            const useImage = document.getElementById('useImageFormat').checked;
+            
+            postAssignmentsBtn.disabled = true;
+            postAssignmentsBtn.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Posting...';
+            
+            fetch('/api/post-assignments', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    post_id: '{{ ride.id }}',
+                    use_image: useImage
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    location.reload();
+                } else {
+                    alert('Error posting assignments: ' + (data.error || 'Unknown error'));
+                }
+            })
+            .catch(error => {
+                alert('Error posting assignments: ' + error);
+            })
+            .finally(() => {
+                postAssignmentsBtn.disabled = false;
+                postAssignmentsBtn.innerHTML = '<i class="bi bi-facebook me-2"></i> Post Assignments';
+            });
+        });
+    }
+});
+</script>
+{% endblock %}

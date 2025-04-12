@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+
+{% block title %}Rides - Transportation System{% endblock %}
+
+{% block content %}
+<div class="py-3">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="h2">Rides</h1>
+        <a href="{{ url_for('new_ride') }}" class="btn btn-primary">
+            <i class="bi bi-plus-lg me-2"></i> Schedule New Ride
+        </a>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-header bg-white">
+            <ul class="nav nav-tabs card-header-tabs" id="ridesTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab">
+                        All Rides
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="upcoming-tab" data-bs-toggle="tab" data-bs-target="#upcoming" type="button" role="tab">
+                        Upcoming
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="past-tab" data-bs-toggle="tab" data-bs-target="#past" type="button" role="tab">
+                        Past
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div class="card-body p-0">
+            <div class="tab-content" id="ridesTabContent">
+                <div class="tab-pane fade show active" id="all" role="tabpanel">
+                    {% include 'partials/_rides_table.html' with context %}
+                </div>
+                <div class="tab-pane fade" id="upcoming" role="tabpanel">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Date & Time</th>
+                                    <th>Message</th>
+                                    <th>Status</th>
+                                    <th>Passengers</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% set upcoming_count = [0] %}
+                                {% for post in posts %}
+                                    {% if post.scheduled_time > now %}
+                                    {% set _ = upcoming_count.append(upcoming_count.pop() + 1) %}
+                                    <tr>
+                                        <td>{{ post.scheduled_time.strftime('%b %d, %Y %H:%M') }}</td>
+                                        <td>{{ post.message|truncate(40) }}</td>
+                                        <td>
+                                            {% if post.is_posted %}
+                                            <span class="badge bg-success">Posted</span>
+                                            {% else %}
+                                            <span class="badge bg-warning text-dark">Scheduled</span>
+                                            {% endif %}
+                                        </td>
+                                        <td>{{ post.passengers|default([])|length }}</td>
+                                        <td>
+                                            <a href="{{ url_for('ride_detail', ride_id=post.id) }}" class="btn btn-sm btn-outline-primary">
+                                                <i class="bi bi-eye"></i> View
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    {% endif %}
+                                {% endfor %}
+                                {% if upcoming_count[0] == 0 %}
+                                    <tr>
+                                        <td colspan="5" class="text-center py-3">
+                                            <p class="mb-0">No upcoming rides found</p>
+                                            <a href="{{ url_for('new_ride') }}" class="btn btn-sm btn-primary mt-2">
+                                                <i class="bi bi-plus"></i> Schedule a Ride
+                                            </a>
+                                        </td>
+                                    </tr>
+                                {% endif %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="past" role="tabpanel">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Date & Time</th>
+                                    <th>Message</th>
+                                    <th>Status</th>
+                                    <th>Passengers</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% set past_count = [0] %}
+                                {% for post in posts %}
+                                    {% if post.scheduled_time <= now %}
+                                    {% set _ = past_count.append(past_count.pop() + 1) %}
+                                    <tr>
+                                        <td>{{ post.scheduled_time.strftime('%b %d, %Y %H:%M') }}</td>
+                                        <td>{{ post.message|truncate(40) }}</td>
+                                        <td>
+                                            {% if post.is_posted %}
+                                            <span class="badge bg-success">Posted</span>
+                                            {% else %}
+                                            <span class="badge bg-warning text-dark">Scheduled</span>
+                                            {% endif %}
+                                        </td>
+                                        <td>{{ post.passengers|default([])|length }}</td>
+                                        <td>
+                                            <a href="{{ url_for('ride_detail', ride_id=post.id) }}" class="btn btn-sm btn-outline-primary">
+                                                <i class="bi bi-eye"></i> View
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    {% endif %}
+                                {% endfor %}
+                                {% if past_count[0] == 0 %}
+                                    <tr>
+                                        <td colspan="5" class="text-center py-3">
+                                            <p class="mb-0">No past rides found</p>
+                                        </td>
+                                    </tr>
+                                {% endif %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize tabs
+    var tabItems = document.querySelectorAll('#ridesTab button');
+    tabItems.forEach(function(tab) {
+        tab.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all tabs
+            tabItems.forEach(function(t) {
+                t.classList.remove('active');
+            });
+            
+            // Add active class to clicked tab
+            this.classList.add('active');
+            
+            // Show the corresponding tab content
+            var target = document.querySelector(this.getAttribute('data-bs-target'));
+            document.querySelectorAll('.tab-pane').forEach(function(pane) {
+                pane.classList.remove('show', 'active');
+            });
+            target.classList.add('show', 'active');
+        });
+    });
+});
+</script>
+{% endblock %}

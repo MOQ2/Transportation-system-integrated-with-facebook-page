@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block title %}Settings - Transportation System{% endblock %}
+
+{% block content %}
+<div class="py-3">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="h2">Settings</h1>
+        <a href="{{ url_for('dashboard') }}" class="btn btn-outline-secondary">
+            <i class="bi bi-arrow-left me-2"></i> Back to Dashboard
+        </a>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">Facebook Page Integration</h5>
+                </div>
+                <div class="card-body p-4">
+                    <form method="post">
+                        <div class="mb-3">
+                            <label for="page_id" class="form-label">Facebook Page ID</label>
+                            <input type="text" class="form-control" id="page_id" name="page_id" required 
+                                   placeholder="e.g. 123456789012345">
+                            <div class="form-text">The unique identifier for your Facebook page.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="access_token" class="form-label">Page Access Token</label>
+                            <input type="password" class="form-control" id="access_token" name="access_token" required>
+                            <div class="form-text">Long-lived access token for your Facebook page. Keep this secure!</div>
+                        </div>
+
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button type="submit" class="btn btn-primary">Save Credentials</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">Admin Account</h5>
+                </div>
+                <div class="card-body p-4">
+                    <form method="post" action="{{ url_for('change_password') }}">
+                        <div class="mb-3">
+                            <label for="current_password" class="form-label">Current Password</label>
+                            <input type="password" class="form-control" id="current_password" name="current_password" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="new_password" class="form-label">New Password</label>
+                            <input type="password" class="form-control" id="new_password" name="new_password" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="confirm_password" class="form-label">Confirm New Password</label>
+                            <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
+                        </div>
+
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button type="submit" class="btn btn-primary">Change Password</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">Getting Your Page ID</h5>
+                </div>
+                <div class="card-body">
+                    <ol class="mb-0">
+                        <li class="mb-2">Go to your Facebook page</li>
+                        <li class="mb-2">Click on "About" in the left sidebar</li>
+                        <li class="mb-2">Scroll down to find your Page ID</li>
+                        <li>Copy the ID and paste it here</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="card shadow-sm">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">Getting an Access Token</h5>
+                </div>
+                <div class="card-body">
+                    <ol class="mb-0">
+                        <li class="mb-2">Go to <a href="https://developers.facebook.com/" target="_blank">Facebook for Developers</a></li>
+                        <li class="mb-2">Create a new app or use an existing one</li>
+                        <li class="mb-2">Add the "Facebook Login" product</li>
+                        <li class="mb-2">Go to "Graph API Explorer"</li>
+                        <li class="mb-2">Select your app and page</li>
+                        <li class="mb-2">Request permissions: <code>pages_read_engagement</code>, <code>pages_manage_posts</code></li>
+                        <li>Generate a token and paste it here</li>
+                    </ol>
+                    <div class="alert alert-warning mt-3">
+                        <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                        Page access tokens typically expire after 60 days. For long-term use, you'll need to generate a long-lived token.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

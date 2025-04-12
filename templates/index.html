@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome - Transportation System{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-6">
+            <h1 class="display-4 fw-bold">Transportation Management System</h1>
+            <p class="lead my-4">
+                Connect your Facebook page and manage transportation services efficiently.
+                Schedule rides, track passengers, and assign cars with our intuitive platform.
+            </p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                {% if current_user.is_authenticated %}
+                <a href="{{ url_for('dashboard') }}" class="btn btn-primary btn-lg px-4 me-md-2">Go to Dashboard</a>
+                {% else %}
+                <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg px-4 me-md-2">Login</a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <img src="https://via.placeholder.com/600x400?text=Transportation+System" alt="Transportation System" class="img-fluid rounded shadow">
+        </div>
+    </div>
+
+    <div class="row mt-5 py-5 border-top">
+        <div class="col-12 text-center mb-4">
+            <h2>How It Works</h2>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center p-4">
+                    <div class="mb-3">
+                        <i class="bi bi-facebook text-primary" style="font-size: 3rem;"></i>
+                    </div>
+                    <h4>Connect Facebook Page</h4>
+                    <p>Link your Facebook page to our system using Page ID and Access Token.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center p-4">
+                    <div class="mb-3">
+                        <i class="bi bi-calendar-event text-primary" style="font-size: 3rem;"></i>
+                    </div>
+                    <h4>Schedule Rides</h4>
+                    <p>Create and schedule ride announcements that automatically post to your Facebook page.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center p-4">
+                    <div class="mb-3">
+                        <i class="bi bi-people text-primary" style="font-size: 3rem;"></i>
+                    </div>
+                    <h4>Manage Passengers</h4>
+                    <p>Automatically collect passenger details from comments and assign them to available cars.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5 py-5 bg-light rounded">
+        <div class="col-lg-8 offset-lg-2 text-center">
+            <h2>Start Managing Your Transportation Services Today</h2>
+            <p class="lead my-4">
+                Our transportation management system makes it easy to coordinate rides, 
+                track passengers, and assign cars - all integrated with your Facebook page.
+            </p>
+            {% if not current_user.is_authenticated %}
+            <a href="{{ url_for('login') }}" class="btn btn-lg btn-primary">Get Started</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
